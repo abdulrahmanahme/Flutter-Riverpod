@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod2/riverpod/first_exmple_riverpod.dart';
-import 'package:riverpod2/riverpod/second_exmple_riverpod.dart';
+import 'package:riverpod2/riverpod/first_example_riverpod.dart';
+import 'package:riverpod2/riverpod/second_example_riverpod.dart';
 
 void main() {
   runApp(

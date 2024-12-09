@@ -3,7 +3,8 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod2/riverpod/second_exmple_riverpod.dart';
+import 'package:riverpod2/riverpod/second_example_riverpod.dart';
+import 'package:riverpod2/riverpod/third_example_riverpod.dart';
 
 /// initialize Provider for String
 final userName = Provider<String>((ref) => 'Abdo Ahmed');
@@ -49,6 +50,9 @@ class FirstExampleRiverpod extends ConsumerWidget {
                 number.toString(),
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
             InkWell(
               onTap: () {
                 Navigator.push(
@@ -59,9 +63,25 @@ class FirstExampleRiverpod extends ConsumerWidget {
                 );
               },
               child: const Text(
-                'Go to next page',
+                'Future Provider page',
               ),
-            )
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ThirdExampleRiverpod(),
+                  ),
+                );
+              },
+              child: const Text(
+                'Stream Provider page',
+              ),
+            ),
           ],
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {

@@ -3,6 +3,7 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod2/riverpod/second_exmple_riverpod.dart';
 
 /// initialize Provider for String
 final userName = Provider<String>((ref) => 'Abdo Ahmed');
@@ -30,7 +31,7 @@ final userName = Provider<String>((ref) => 'Abdo Ahmed');
 //   }
 // }
 
-final counterProvider = StateProvider<int>((ref) => 0);
+final counterProvider = StateProvider.autoDispose<int>((ref) => 0);
 
 class FirstExampleRiverpod extends ConsumerWidget {
   const FirstExampleRiverpod({super.key});
@@ -48,6 +49,19 @@ class FirstExampleRiverpod extends ConsumerWidget {
                 number.toString(),
               ),
             ),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SecondExampleRiverpod(),
+                  ),
+                );
+              },
+              child: const Text(
+                'Go to next page',
+              ),
+            )
           ],
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {

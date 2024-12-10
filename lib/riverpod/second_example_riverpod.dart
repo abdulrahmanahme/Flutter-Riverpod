@@ -70,8 +70,7 @@ class SecondExampleRiverpod extends ConsumerWidget {
                             const SizedBox(
                               width: 10,
                             ),
-                            SizedBox(
-                              width: MediaQuery.sizeOf(context).width * .6,
+                            Expanded(
                               child: Text(
                                 data[index]["title"],
                                 maxLines: 2,

@@ -3,6 +3,8 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod2/riverpod/combining_riverpod.dart';
+import 'package:riverpod2/riverpod/notify_number_screen.dart';
 import 'package:riverpod2/riverpod/second_example_riverpod.dart';
 import 'package:riverpod2/riverpod/third_example_riverpod.dart';
 
@@ -80,6 +82,38 @@ class FirstExampleRiverpod extends ConsumerWidget {
               },
               child: const Text(
                 'Stream Provider page',
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CombiningRiverpodScreen(),
+                  ),
+                );
+              },
+              child: const Text(
+                'Combining Riverpod Screen',
+              ),
+            ),
+             const SizedBox(
+              height: 10,
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const NotifyNumberScreen(),
+                  ),
+                );
+              },
+              child: const Text(
+                'Notify Number Screen',
               ),
             ),
           ],

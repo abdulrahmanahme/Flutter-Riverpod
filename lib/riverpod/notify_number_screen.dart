@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod2/riverpod/notify_number.dart';
 
-var notifyNumber =
-    ChangeNotifierProvider<NotifyNumber>((ref) => NotifyNumber());
 
 class NotifyNumberScreen extends ConsumerWidget {
   const NotifyNumberScreen({super.key});
@@ -11,7 +9,6 @@ class NotifyNumberScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     var numerValue = ref.watch(notifyNumber);
-
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

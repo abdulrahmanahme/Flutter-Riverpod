@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod2/riverpod/first_example_riverpod.dart';
 import 'package:riverpod2/riverpod/second_example_riverpod.dart';
+import 'package:riverpod2/shop/view/shop_product_screen.dart';
 
 void main() {
   runApp(
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const FirstExampleRiverpod(),
+      home: const ShopProductScreen(),
     );
   }
 }

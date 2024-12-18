@@ -33,7 +33,14 @@ final userName = Provider<String>((ref) => 'Abdo Ahmed');
 //     );
 //   }
 // }
+class CartNotifier extends Notifier{
+  @override
+  build() {
+    // TODO: implement build
+    throw UnimplementedError();
+  }
 
+}
 final counterProvider = StateProvider.autoDispose<int>((ref) => 0);
 
 class FirstExampleRiverpod extends ConsumerWidget {

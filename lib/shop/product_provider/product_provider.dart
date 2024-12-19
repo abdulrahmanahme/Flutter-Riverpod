@@ -1,5 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod2/shop/product_shop_model/product_shop_model.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+// part 'product_provider.g.dart';
 
 final List<ProductShopModel> productShopModel = [
   const ProductShopModel(
@@ -24,6 +26,16 @@ final List<ProductShopModel> productShopModel = [
 
 final productShop = Provider((ref) => productShopModel);
 
-final filterProductShop = Provider((ref) {
+final reduceProductShop = Provider((ref) {
   return productShopModel.where((product) => product.price > 50).toList();
 });
+
+// @riverpod
+// List<ProductShopModel> productShop(Ref ref) {
+//   return productShopModel;
+// }
+
+// @riverpod
+// List<ProductShopModel> reduceProductShop(Ref ref) {
+//   return productShopModel.where((product) => product.price > 50).toList();
+// }
